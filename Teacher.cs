@@ -18,11 +18,6 @@ namespace CourseManagementPortal
 
     internal static class TeacherManager
     {
-        internal static void Add()
-        {
-
-        }
-
         internal static List<Teacher> GetTeachers()
         {
             var list = new List<Teacher>();
@@ -51,15 +46,6 @@ namespace CourseManagementPortal
             }
 
             return list;
-        }
-
-        internal static void Update()
-        {
-
-        }
-        internal static void Delete()
-        {
-
         }
     }
 }

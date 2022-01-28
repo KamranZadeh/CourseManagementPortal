@@ -36,12 +36,8 @@ namespace CourseManagementPortal
             Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
 
             panelStudent.BringToFront();
-            //panelTeacher.SendToBack();
-            //panelCourse.SendToBack();
 
             panelStudentBottom.BringToFront();
-            //panelTeacherBottom.SendToBack();
-            //panelCourseBottom.SendToBack();
             btnStudent.BackColor = Color.FromArgb(46, 51, 73);
 
             dataGridViewStudent.DataSource = StudentManager.GetStudents();
@@ -62,12 +58,8 @@ namespace CourseManagementPortal
             btnStudent.BackColor = Color.FromArgb(46, 51, 73);
 
             panelStudent.BringToFront();
-            //panelTeacher.SendToBack();
-            //panelCourse.SendToBack();
 
             panelStudentBottom.BringToFront();
-            //panelTeacherBottom.SendToBack();
-            //panelCourseBottom.SendToBack();
 
             dataGridViewStudent.DataSource = StudentManager.GetStudents();
         }
@@ -79,14 +71,8 @@ namespace CourseManagementPortal
             btnTeacher.BackColor = Color.FromArgb(46, 51, 73);
             btnStudent.BackColor = Color.FromArgb(24, 30, 54);
 
-            //panelStudent.SendToBack();
             panelTeacher.BringToFront();
-            //panelCourse.SendToBack();
-
-            //panelStudentBottom.SendToBack();
             panelTeacherBottom.BringToFront();
-            //panelCourseBottom.SendToBack();
-            //panelPlanStartBottom.SendToBack();
 
             dataGridViewTeacher.DataSource = TeacherManager.GetTeachers();
         }
@@ -98,12 +84,7 @@ namespace CourseManagementPortal
             btnCourse.BackColor = Color.FromArgb(46, 51, 73);
             btnStudent.BackColor = Color.FromArgb(24, 30, 54);
 
-            //panelStudent.SendToBack();
-            //panelTeacher.SendToBack();
             panelCourse.BringToFront();
-
-            //panelStudentBottom.SendToBack();
-            //panelTeacherBottom.SendToBack();
             panelCourseBottom.BringToFront();
 
             dataGridViewCourse.DataSource = CourseManager.GetCourses();

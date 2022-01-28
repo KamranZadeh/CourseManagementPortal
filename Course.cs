@@ -15,19 +15,12 @@ namespace CourseManagementPortal
 
         internal static class CourseManager
         {
-            internal static void Add()
-            {
-               
-            }
-
             internal static List<Course> GetCourses()
             {
                 var list = new List<Course>();
 
                 using (var connection = new SqlConnection(@"Server=.\SQLEXPRESS;Database=CourseManagementPortalData;Trusted_Connection=True; TrustServerCertificate=True"))
                 {
-
-
                     connection.Open();
 
                     var cmd = connection.CreateCommand();
@@ -53,16 +46,6 @@ namespace CourseManagementPortal
                 }
 
                 return list;
-
-            }
-
-            internal static void Update()
-            {
-
-            }
-
-            internal static void Delete()
-            {
 
             }
         }

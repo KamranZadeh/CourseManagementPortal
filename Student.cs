@@ -16,13 +16,6 @@ namespace CourseManagementPortal
 
         internal class StudentManager
         {
-            internal void Add()
-            {
-                
-                Student student = new Student();
-                GetStudents().Add(student);
-            }
-
             internal static List<Student> GetStudents()
             {
                 var list = new List<Student>();
@@ -55,16 +48,6 @@ namespace CourseManagementPortal
                 }
 
                 return list;
-
-            }
-
-            internal static void Update()
-            {
-
-            }
-
-            internal static void Delete()
-            {
 
             }
         }
