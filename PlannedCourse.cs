@@ -18,12 +18,16 @@ namespace CourseManagementPortal
 
     static internal class PlannedCourseManager
     {
+
+        const string connectionString = @"Server=.\SQLEXPRESS;Database=CourseManagementPortalData;Trusted_Connection=True; TrustServerCertificate=True";
+
+
         static internal List<PlannedCourse> GetAll()
         {
             var list = new List<PlannedCourse>();
 
 
-            using (var connection = new SqlConnection(@"Server=.\SQLEXPRESS;Database=CourseManagementPortalData;Trusted_Connection=True; TrustServerCertificate=True"))
+            using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
 

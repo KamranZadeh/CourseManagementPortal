@@ -13,16 +13,27 @@ namespace CourseManagementPortal
         public string Name { get; set; }
         public string Surname { get; set; }
         public DateTime BirthDate { get; set; }
-        public string Profession { get; set; }
+        public string CanTeach1 { get; set; }
+        public string CanTeach2 { get; set; }
+        public string CanTeach3 { get; set; }
     }
 
     internal static class TeacherManager
     {
+
+        const string connectionString = @"Server=.\SQLEXPRESS;Database=CourseManagementPortalData;Trusted_Connection=True; TrustServerCertificate=True";
+
+
+        internal static void Add()
+        {
+
+        }
+
         internal static List<Teacher> GetTeachers()
         {
             var list = new List<Teacher>();
 
-            using (var connection = new SqlConnection(@"Server=.\SQLEXPRESS;Database=CourseManagementPortalData;Trusted_Connection=True; TrustServerCertificate=True"))
+            using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
 
@@ -38,7 +49,9 @@ namespace CourseManagementPortal
                         Name = dr.GetString(1),
                         Surname = dr.GetString(2),
                         BirthDate = dr.GetDateTime(3),
-                        Profession = dr.GetString(4)
+                        CanTeach1 = dr.GetString(4),
+                        CanTeach2 = dr.GetString(5),
+                        CanTeach3 = dr.GetString(6)
                     };
 
                     list.Add(teacher);
@@ -46,6 +59,15 @@ namespace CourseManagementPortal
             }
 
             return list;
+        }
+
+        internal static void Update()
+        {
+
+        }
+        internal static void Delete()
+        {
+
         }
     }
 }

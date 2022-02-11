@@ -18,12 +18,16 @@ namespace CourseManagementPortal
 
     static internal class OngoingCourseManager
     {
+
+        const string connectionString = @"Server=.\SQLEXPRESS;Database=CourseManagementPortalData;Trusted_Connection=True; TrustServerCertificate=True";
+
+
         static internal List<OngoingCourse> GetAll()
         {
             var list = new List<OngoingCourse>();
 
 
-            using (var connection = new SqlConnection(@"Server=.\SQLEXPRESS;Database=CourseManagementPortalData;Trusted_Connection=True; TrustServerCertificate=True"))
+            using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
 
